@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Chocolate Classical Sans";
+    src: url("../../../fonts/ChocolateClassicalSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Candara";
+    src: url("../../../fonts/candara.ttf");
+}
+
+
+#instruction-page {
+    padding-top: 15vh;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Chocolate Classical Sans";
+    font-size: 120%;
+
+}
+
+h1 {
+    color: #72A4E8;
+    font-family: "Candara";
+    font-size: 250%;
+}
+
+p {
+    color: #72A4E8;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}

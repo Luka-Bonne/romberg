@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "Candara";
+    src: url("../../fonts/candara.ttf");
+}
+@font-face {
+    font-family: "Chocolate Classical Sans";
+    src: url("../../fonts/ChocolateClassicalSans-Regular.ttf");
+}
+
+
+/* стиль для основного контейнера */
+.camera-pg {
+  width: 100%;
+  min-height: 90vh;
+
+  padding-bottom: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* стиль текста */
+.camera-text {
+  position: relative;
+  padding: 5vh;
+  color: #2c3e50;
+
+  font-family: "Chocolate Classical Sans", sans-serif;
+
+  width: 60%;
+  height: 22%;
+}
+
+h1#hp-blue {
+  font-family: "Candara";
+  font-weight: lighter;
+  font-size: 200%;
+  
+  color: #72A4E8;
+  font-weight: bold;
+}
+
+h3#text-blue {
+  font-family: "Candara";
+  font-weight: lighter;
+  font-size: 150%;
+  
+  color: #72A4E8;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Chocolate Classical Sans";
+  font-weight: lighter;
+  
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* начиная отсюда - стили для камеры */
+.camera {
+  position: relative;
+  width: 100%;
+  max-width: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* стиль контейнера с видео (экран, где картинку видно) */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 90vh;
+  max-height: 60vh;
+  background: #000;
+  border-radius: 1vh;
+  overflow: hidden;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-off-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.camera-off-message {
+  color: white;
+  font-family: "Candara";
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* стили для кнопок (панель управления камерой от 2х до 3х кнопок) */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* общий стиль для всех кнопок */
+.camera-button, .upload-video {
+  padding: 12px 24px;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  border-radius: 1vh;
+  cursor: pointer;
+  font-family: "Chocolate Classical Sans", sans-serif;
+  font-size: 16px;
+  transition: all 0.2s;
+  min-width: 180px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* стиль для кнопки загрузки видео */
+.upload-video {
+  background-color: white;
+  border: 2px solid #8C7AA2;
+  color: #8C7AA2;
+}
+
+/* .upload-video:hover {
+  background-color: #ddd3e9;
+} */
+
+/* стиль для кнопки начала записи видео */
+.start-video {
+  background-color: #9ABF80;
+  border: none;
+  color: #2c3e50;
+}
+
+.start-video:hover {
+  background-color: #7DA064;
+  color: #2c3e50;
+}
+
+/* для остановки записи */
+.stop-video {
+  border: none;
+  background: #EC8305;
+  color: white;
+}
+
+.stop-video:hover {
+  background: #D07911;
+}
+
+/* группировка кнопок панели управления */
+.video-controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* индикатор записи */
+.recording-indicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* красная точка записи */
+.recording-dot {
+  width: 8px;
+  height: 8px;
+  background: #f44336;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* сообщение об ошибке */
+.camera-error {
+  color: red;
+  text-align: center;
+}
+
+/* предпросмотр записи */
+.video-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recording-preview video {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+/* стили для иконок */
+.svg-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.camera-button, .upload-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-button:hover .svg-icon,
+.upload-video:hover .svg-icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* общий контейнер для кнопкок с обозначением загруженных/записанных видео */
+.upload-video-bottons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* сами кнопки */
+.video-botton {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.video-botton:hover {
+  background: #e9e9e9;
+}
+
+.video-botton.active {
+  background: #72A4E8;
+  color: black;
+  border-color: #72A4E8;
+}
+
+.video-botton.active:hover {
+  background: #C5D0F4;
+  color: black;
+  border-color: #C5D0F4;
+}
+
+.video-botton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* блок с кнопкой загрузки видео на сервер */
+.upload-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* кнопка загрузки видео на серсер */
+.upload-video-button {
+  background-color: #9ABF80;
+  border: none;
+  color: #000000;
+}
+
+.upload-video-button:hover {
+  background-color: #7DA064;
+  color: #000000;
+}
+
+/* линия загрузки видео на серсер */
+.upload-progress {
+  margin-top: 10px;
+}
+
+.upload-progress progress {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* собственно статус текущей загрузки */
+.upload-status {
+  margin-top: 10px;
+  color: #72A4E8;
+  font-weight: bold;
+}

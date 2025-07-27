@@ -1,0 +1,44 @@
+#scaning-page {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-top: 5vh;
+  padding-left: 10vh;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #4285f4;
+  color: #4285f4;
+}
+
+.tab-button:disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #666;
+}

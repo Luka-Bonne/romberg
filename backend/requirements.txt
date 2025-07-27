@@ -1,0 +1,15 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-multipart
+openai>=1.0.0 
+numpy
+opencv-python
+
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-multipart
+numpy
+opencv-python
+tensorflow
+filterpy
+python-magic==0.4.27

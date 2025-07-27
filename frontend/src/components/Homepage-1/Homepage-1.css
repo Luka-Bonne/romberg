@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Candara";
+    src: url("../../fonts/candara.ttf");
+}
+
+
+/* основной блок главной страницы */
+.hp-1 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    /* max-width: 100%;
+    max-height: 100%; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+/* левая сторона главной страницы */
+.left-side{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap; 
+
+    padding-top: 10vh;
+
+    width: 100%;
+    height: 90vh;
+
+    align-items:center;
+    justify-content: center;
+    
+    text-align: center;
+}
+
+/* текстовая часть левой стороны */
+.hp-text {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.hp-font {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Candara";
+    font-weight: bold;
+    font-size: 300%;
+    color: #2c3e50;
+}
+
+h3#hp-blue {
+    color: #72A4E8;
+    font-weight: lighter;
+    font-size: 150%;
+}
+
+/* кнопки левой стороны */
+.hp-buttons {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center; 
+    width: 100%; 
+    gap: 20px;
+
+    /* width: 60%; */
+}
+
+button#hp-button-first {
+    align-items:center;
+    justify-content: center;
+
+    /* margin: 3%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: medium;
+
+    background-color: #72A4E8;
+    border: hidden;
+    border-radius: 1vh;
+}
+
+button#hp-button-first:hover {
+    background-color: #C5D0F4;
+    color: #2c3e50;
+}
+
+button#hp-button-second {
+    align-items:center;
+    justify-content: center;
+
+    /* margin: 3%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: medium;
+
+    color: #2c3e50;
+
+    background-color: #ffffff;
+    border-color: #72A4E8;
+    border-radius: 1vh;
+}
+
+
+/* правая сторона главной стораницы */
+.right-side{
+    display:flex;
+
+    align-items:center;
+    justify-content: center;
+
+    padding-top: 10vh;
+    
+    text-align: center;
+    overflow: auto;
+}
+
+.right-side img#img-hp {
+    width: 75%;
+    height: 80%;
+}

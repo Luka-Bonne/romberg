@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Chocolate Classical Sans";
+    src: url("../../fonts/ChocolateClassicalSans-Regular.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    max-height: 150px;
+    background-color: #FFFFFF;
+    box-shadow: -1px 9px 20px rgba(0, 0, 0, 0.25);
+    font-size: 120%;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 100;
+}
+
+.logo-link {
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70%;
+    width: auto;
+    max-height: 120px;
+    fill: #8C7AA2; /* Управление цветом SVG */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-buttons {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 3vw;
+}
+
+.header-text {
+    color: #8C7AA2;
+    font-size: 20px;
+    font-family: "Chocolate Classical Sans";
+    transition: transform 0.3s ease;
+}
+
+.header-text:hover {
+    transform: scale(1.05);
+    color: #6a5a7a;
+}
+
+.registr-btn {
+    padding: 5% 10% 6% 10%;
+    background: #8C7AA2;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 1vh;
+    border: hidden;
+}
+
+.link-text {
+    color: #fff;
+    font-family: "Chocolate Classical Sans";
+    font-size: medium;
+}
